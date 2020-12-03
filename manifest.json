@@ -1,0 +1,27 @@
+{
+ "name": "Simple Timer",
+ "version": "1",
+ "description": "GTD!",
+ "background": {"page":"background.html"},
+ "manifest_version": 2,
+ "browser_action": {
+   "name": "Simple Timer",
+   "icons": ["icon.png"],
+   "default_icon": "icon.png",
+   "default_popup": "popup.html"
+ },
+ "permissions": [
+    "tabs", "<all_urls>"
+  ],
+ "content_scripts": [ {
+   "css": ["customStyles.css"],
+   "matches": [
+     "http://www.aliexpress.com/*",
+     "https://www.aliexpress.com/*",
+     "http://trade.aliexpress.com/*",
+     "http://ru.aliexpress.com/*",
+     "https://ru.aliexpress.com/*",
+     "https://login.aliexpress.com/*"
+   ]
+ }]
+}
